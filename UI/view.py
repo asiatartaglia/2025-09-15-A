@@ -6,7 +6,7 @@ class View(ft.UserControl):
         super().__init__()
         # page stuff
         self._page = page
-        self._page.title = "Esame-settembre"
+        self._page.title = "Esame del 15/09/2025"
         self._page.horizontal_alignment = 'CENTER'
         self._page.theme_mode = ft.ThemeMode.LIGHT
         self._page.bgcolor = "#ebf4f4"
@@ -21,12 +21,13 @@ class View(ft.UserControl):
 
     def load_interface(self):
         # title
-        self._title = ft.Text("Esame-settembre", color="blue", size=24)
+        self._title = ft.Text("Esame del 15/09/2025", color="blue", size=24)
         self._page.controls.append(self._title)
 
         self._ddAnno1 = ft.Dropdown(label="Da", hint_text="Anno")
         self._ddAnno2 = ft.Dropdown(label="A", hint_text="Anno")
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
+
 
         cont1 = ft.Container(self._ddAnno1, width=250)
         cont2 = ft.Container(self._ddAnno2, width=250)
