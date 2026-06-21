@@ -26,6 +26,9 @@ class View(ft.UserControl):
 
         self._ddAnno1 = ft.Dropdown(label="Da", hint_text="Anno")
         self._ddAnno2 = ft.Dropdown(label="A", hint_text="Anno")
+        self._controller.fillYearsDA()
+        self._controller.fillYearsA()
+
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
 
 
